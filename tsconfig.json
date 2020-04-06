@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist",
+        "allowJs": true,
+        "checkJs": false,
+        "target": "es5",
+        "types" : ["node"]
+    },
+    "include": [
+        "./source/**/*.ts",
+        "./source/*.ts"
+    ],
+    "exclude": [
+	"**/*.spec.ts"
+    ]
+}

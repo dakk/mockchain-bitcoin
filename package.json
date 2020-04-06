@@ -2,9 +2,10 @@
   "name": "mockchain-bitcoin",
   "version": "0.0.1",
   "description": "A typescript library for unit testing that simulates a simple in-memory Bitcoin blockchain",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "npm run test"
+    "build": "tsc --build tsconfig.json",
+    "test": "mocha -r ts-node/register test/*.spec.ts"
   },
   "repository": {
     "type": "git",
@@ -14,12 +15,25 @@
     "bitcoin",
     "mockchain",
     "blockchain",
-    "unittesting"
+    "unit-testing"
   ],
   "author": "Davide Gessa (gessadavide@gmail.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/dakk/mockchain-bitcoin/issues"
   },
-  "homepage": "https://github.com/dakk/mockchain-bitcoin#readme"
+  "homepage": "https://github.com/dakk/mockchain-bitcoin#readme",
+  "dependencies": {
+    "bitcoinjs-lib": "^5.1.7",
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.11",
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^12.6.9",
+    "chai": "^4.2.0",
+    "mocha": "^7.1.1",
+    "ts-node": "^8.8.2",
+    "typescript": "^3.8.3"
+  }
 }
